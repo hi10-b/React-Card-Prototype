@@ -2,33 +2,39 @@ import React from 'react'
 import { shallowEqual, useSelector } from 'react-redux';
 import CardBlock from './card'
 import { Col, Container, Row } from 'react-bootstrap'
+import PropTypes from 'prop-types';
 
 //fetch from db for different panels
 import { topGrid } from '../data'
+import { propTypes } from 'react-bootstrap/esm/Image';
 
-const PanelContainer = () => {
+const PanelContainer = ({data}) => {
     return (
-        <Container style={{'backgroundColor':'blue', 'padding':'10px'}}>
+        <Container style={{ 'backgroundColor': 'blue', 'padding': '10px' }}>
+            data.forEach(item => {
+            const bye = 'world';
+                const obj = { bye }
+                const { hello } = item;
+            })
             <Row>
-                {
-                topGrid.map((value, key) => {
-                    return (
-                        //panel with top grid info
-                        <PanelContent value={value}/>
-                    )
-                })}
+               <Col xl={3} className={'mt-4 card-container'}>
+                    <CardBlock header={eventName} body={body} footer={footer} />
+                </Col>
             </Row>
         </Container>
     )
 }
 
-const PanelContent = ({value}) => {
-    return (
-        <Col xl={3} className={'mt-4 card-container'}>
-            <CardBlock header={value.company} body={value.ticker} footer={value.stockPrice} />
-            {/* {props.children} */}
-        </Col>
-    )
+PanelContainer.propTypes = {
+    header: PropTypes.string,
+    body: PropTypes.string,
+    footer: PropTypes.string
 }
+
+// const PanelContent = ({value}) => {
+//     return (
+//         <div></div>
+//     )
+// }
 
 export default PanelContainer;
