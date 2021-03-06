@@ -4,8 +4,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './card2.css';
 import image from '../randIMG.jpg'
 
-const CardBlock = ({ header, body, footer }) => {
-
+const CardBlock = ( { header, body, footer }) => {
     return (        
             <Card className={'fullCard'}>
                 {header && <Header header={header} />}
@@ -13,6 +12,9 @@ const CardBlock = ({ header, body, footer }) => {
                 {body && <Body body={body} /> }
 
                 {footer && <Footer footer={footer} />}
+                {/* <Header />
+                <Body />
+                <Footer /> */}
             </Card>   
     )
     
@@ -27,12 +29,12 @@ const Header = ({header}) => {
 //info
 const Body = ({body}) => {
     return  <Card.Body>
-                <img src={image} style={{ height: '100%', width:'100%'}}></img>
+                <img src={image} style={{ height: '80%', width:'100%'}}></img>
                 <Card.Text>
                     {body}
                 </Card.Text>
                 <Card.Text>
-                    {body}
+                    <h1>asd</h1>
                 </Card.Text>
             </Card.Body>
 }
