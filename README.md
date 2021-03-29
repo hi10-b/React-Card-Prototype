@@ -1,7 +1,6 @@
 # React prototype for a social/blog web application
 
 ## Part of a volunteer project 
-## A social/ blog web application
 
 #This is not a final project
 This was used to implement and trial features before publishing them to a private repository
