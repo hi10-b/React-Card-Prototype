@@ -6,11 +6,16 @@
 This was used to implement and trial features before publishing them to a private repository
 This is a simple showcase of the flow and look of the final product
 
+Main aim of this project was to take existing react-card trial app and implement industrial practices
+by creating reusable compnents and features which are then used by pages.
+
 ### CONSISTS OF:
+- React-Hooks
+- Reusable components/features
 - React-Card
+- React-Card-Grid
 - React Bootstrap
 - Folder structure -> components/features/pages
-- Hooks (started implementation but not fully functional)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
